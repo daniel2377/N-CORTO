@@ -1,0 +1,567 @@
+*  {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+}
+.hero  {
+    width: 90%;
+    margin: auto;
+
+}
+.navbar{
+    margin: 30px auto;
+    height: 100;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #ddd;
+}
+
+  .select-box {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+  }
+  
+  .select-box .options-container {
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 6px 1px rgb(238, 238, 238);
+    color: rgb(23, 35, 47);
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+  }
+  
+  .selected {
+    background: rgb(246, 246, 246);
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #000000;
+    position: relative;
+    order: 0;
+  }
+
+  
+  .selected::after {
+    content: "";
+    background: url("Ima/chevron-down-solid-60.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 10px;
+    top: 5px;
+  
+    transition: all 0.4s;
+  }
+  
+  .select-box .options-container.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+    
+  }
+  
+  .select-box .options-container.active + .selected::after {
+    transform: rotateX(180deg);
+    top: -6px;
+  }
+  
+  .select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: #dcdcdc;
+    border-radius: 4px 8px 8px 4xp;
+  }
+  
+  .select-box .options-container::-webkit-scrollbar-thumb {
+    background: #8c8c8c;
+    border-radius: 4px  8px 8px 4px ;
+  }
+  
+  .select-box .option,
+  .selected {
+    padding: 12px 24px;
+    cursor: pointer;
+    
+  }
+  
+  .select-box .option:hover {
+    background: rgb(246, 246, 246);
+  }
+  
+  .select-box label {
+    cursor: pointer;
+  }
+  
+  .select-box .option .radio {
+    display: none;
+  }
+.option img{
+      width: 20px;
+  }
+
+ul{
+    flex: 1;
+    text-align: right;
+}
+ul li{
+display: inline-block;
+list-style: none;
+margin: 0 25px;
+}
+ul li a{
+    text-decoration: none;
+    color: #000;
+    padding: 0 10px;
+    position: relative;
+}
+  
+.option a{
+  text-decoration: none;
+  color: #000;
+  padding: 0 10px;
+  position: relative;
+}
+.selected b{
+  text-decoration: none;
+  color: #000;
+  padding: 0 10px;
+  position: relative;
+}
+ul li a::after{
+content: '';
+width: 0;
+height: 6px;
+background: #f14a60;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+top: -10px;
+transition: 0.5s;
+}
+
+ul li a:hover::after{
+width: 100%;
+}
+.navbar-icons img{
+    height: 25px;
+    margin-left: 40px;
+    cursor: pointer;
+
+}
+
+.navbar-icons{
+    margin-left: 40px;
+}
+.banner{
+    display: flex;
+    margin-top: 80px;
+}
+.left-column,.right-column{
+   flex-basis: 50%; 
+   text-align: left;
+}
+.right-column img{
+    width: 90%;
+}
+.serch-box{
+    width: 45%;
+    display: flex;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #ddd;
+    margin: 10px 0 30px;
+}
+.serch-box img{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+.serch-box input{
+width: 100%;
+margin-left: 15px;
+font-size: 17px;
+border: 0;
+outline: none;
+}
+#L1{
+    color: #f14a60;;
+ font-size: 100px;
+}
+#L2{
+    color: rgb(23, 35, 47);
+    font-size: 45px; 
+}
+#ParrafoM{
+    font-size: 14px;
+    color: #999;
+    margin: 40px 0;
+}
+.btn button{
+    padding: 7px 30px;
+    margin-right: 15px;
+    outline: none;
+    border: 1px solid #fb7381; 
+    border-radius: 20px;
+    cursor:pointer;
+    color: #fb7381;
+    background: transparent;
+}
+.btn .primari-btn{
+    background: linear-gradient(#fb7381, #f14a60);
+    box-shadow: 0 2px 15px rgba(248, 38, 103, 0.26);
+    color: #fff;
+
+}
+.rotate{
+    transform: rotate(180deg);
+}
+#boton5 {
+  color: #fff !important;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: linear-gradient(#fb7381, #f14a60);
+  position: relative;
+  border: 2px solid #fb7381;
+  outline: 1px solid;
+  outline-color: rgba(248, 38, 103, 0.26);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  border-radius: 25px;
+}
+#boton5:hover {
+  box-shadow: inset 0 0 20px rgba(248, 38, 103, 0.26), 0 0 20px rgba(248, 38, 103, 0.26);
+  outline-color: rgba(49, 138, 172, 0);
+  outline-offset: 80px;
+  text-shadow: 1px 1px 6px #fff;
+}
+#boton6 {
+  color: #fb7381 !important;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background:white;
+  position: relative;
+  border: 2px solid #fb7381;
+  outline: 1px solid;
+  outline-color: rgba(248, 38, 103, 0.26);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+#boton6:hover {
+  box-shadow: inset 0 0 20px rgba(248, 38, 103, 0.26), 0 0 20px rgba(248, 38, 103, 0.26);
+  outline-color: rgba(49, 138, 172, 0);
+  outline-offset: 80px;
+  text-shadow: 1px 1px 6px #fff;
+}
+
+.wrapper .button{
+  display: inline-block ;
+  height: 60px;
+  width: 60px;
+  margin: 0 5px;
+  overflow:hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover{
+  width: 200px;
+}
+
+.wrapper .button .icon{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+
+}
+
+.wrapper .button:nth-child(1):hover .icon{
+  background:  rgb(33, 40, 50);
+}
+.wrapper .button:nth-child(2):hover .icon{
+  background: rgb(255, 67, 77);
+}
+.wrapper .button:nth-child(3):hover .icon{
+  background:rgb(42, 71, 96);
+}
+
+.wrapper .button .icon i{
+font-size: 25px;
+line-height: 60px;
+transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover .icon i{
+color: #fff;
+}
+
+.wrapper .button span{
+ font-size: 20px; 
+ font-weight: 500;
+ line-height: 60px;
+ margin-left: 10px;
+ transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1):hover span{
+  color: rgb(33, 40, 50);
+}
+.wrapper .button:nth-child(2):hover span{
+  color: rgb(255, 67, 77);
+}
+.wrapper .button:nth-child(3):hover span{
+  color: rgb(42, 71, 96);
+}
+
+.bg-modal{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+ 
+}
+.modal-content{
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  
+}
+.modal-content .icon i{
+  font-size: 95px;
+    color: #f14a60;;
+}
+input{
+  width: 60%;
+  height: 25px;
+
+  border-radius: 5px;
+  margin: 15px auto;
+}
+.close{
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 60px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.cuad1{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display:flex;
+  justify-content:right;
+  align-items: center;
+ display: none;
+}
+.cont1-cuad{
+  width: 400px;
+  height: 600px;
+  background-color: white;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  
+}
+.serr{
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 60px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+
+
+.social-media{
+  background-color: rgb(246, 246, 246);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 90%;
+  height: 100px;
+  margin: auto;
+}
+.social-media p{
+  color: rgb(255, 67, 77);
+  font-size: 25px;
+}
+.coppy{
+  background-color: rgb(246, 246, 246);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 90%;
+  height: 45px;
+  margin: auto;
+  border-top: 2px solid rgb(144, 144, 144);
+}
+.coppy p{
+  color: rgb(35, 35, 35);
+  font-size: 18px;
+}
+.coppy span{
+  color: rgb(255, 67, 77);
+  font-size: 18px;
+}
+footer{
+  background-color:rgb(246, 246, 246);
+
+}
+.wrapper1 .button:nth-child(1):hover .icon{
+  background:  rgb(17, 152, 246);
+}
+.wrapper1 .button:nth-child(2):hover .icon{
+  background: rgb(218, 44, 114);
+}
+.wrapper1 .button:nth-child(3):hover .icon{
+  background:rgb(254, 0, 0);
+}
+
+.wrapper1 .button .icon i{
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+  }
+  
+  .wrapper1 .button:hover .icon i{
+  color: #fff;
+  }
+  
+  .wrapper1 .button span{
+   font-size: 20px; 
+   font-weight: 500;
+   line-height: 60px;
+   margin-left: 10px;
+   transition: all 0.3s ease-out;
+  }
+
+    
+.wrapper1 .button{
+  display: inline-block ;
+  height: 60px;
+  width: 60px;
+  margin: 0 5px;
+  overflow:hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+}
+
+.wrapper1 .button:hover{
+  width: 200px;
+}
+
+.wrapper1 .button .icon{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+
+}
+.bg-modal1{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+ 
+}
+.modal-content1{
+  width: 500px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.972);
+  border-radius: 25px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: absolute;
+  
+}
+.modal-content1 .icon i{
+  font-size: 120px;
+    color: rgb(64, 180, 171);
+}
+.bg-modal1{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+ 
+}
+.modal-content1{
+  width: 500px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.972);
+  border-radius: 25px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: absolute;
+  
+}
+
+input{
+  width: 60%;
+  height: 25px;
+
+  border-radius: 5px;
+  margin: 15px auto;
+}
+.close1{
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 60px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.modal-content1 .icon1 img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+}
